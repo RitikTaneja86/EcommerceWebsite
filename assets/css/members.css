@@ -1,7 +1,3 @@
-/* #members-list{
-    margin-top: 10%;
-} */
-
 .member-head h1{
     margin: auto;
     width: 90%;
@@ -31,6 +27,7 @@
 }
 
 .member{
+    max-height: 400px;
     margin:10px 15px;
     padding: 0 10px;
     display: inline-block;
@@ -56,7 +53,9 @@
     border: black;
     border-style: solid;
 }
+
 .member .member-info{
+    width: 200px;
     padding-bottom: 10px;
     text-align: center;    
     color: antiquewhite;
@@ -81,8 +80,12 @@
     font-weight: 600;
 }
 
+.member .member-info .specialisation{
+    width: 200px;
+}
+
 .member .member-info .specialisation h3{
     font-family: cursive ;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 600; 
 }

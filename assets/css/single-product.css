@@ -1,9 +1,9 @@
 .d-main{
     width: 95%;
     margin: auto;
-    /* margin-top: 20px; */
+    margin-top: 10px;
     padding-top: 20px;
-    background: linear-gradient(to left, #093a2f, #07383f 55%, #666465);
+    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
 }
 
 .d-image{
@@ -17,27 +17,31 @@
 }
 
 .d-image .img{
-    width: 30%;
+    width: 400px;
     text-align: center;
     cursor: pointer;
+    margin: auto;
 }
 
 .d-image .img img{
     width: 325px;
     height:325px;
-    padding:20px 0;
+    padding: 20px 0;
     margin: auto;
     margin-top:15px;
 }
+
 .d-image .head{
-    width: 33%;
+    width: 400px;
+    margin: auto;
 }
+
 .d-image .image-name{
     width: 100%;
     margin-top: 50px;
     text-align: center;
-    
 }
+
 .d-image .image-name h2{
     padding-bottom: 15px;
     font-size: 50px;
@@ -50,6 +54,7 @@
     font-weight: 600;
     color: red;
 }
+
 .desc-links {
     width: 30%;
 }
@@ -75,7 +80,6 @@
     list-style: none;
     margin: auto;
     background: linear-gradient(to left, rgba(5, 5, 5, 0), rgb(29, 27, 27));
-
 }
 
 .desc-links ul li {
@@ -100,16 +104,10 @@
 
 .d-main .info-div{
     width: 450px;
-    height: 300px;
+    height: 400px;
     margin: auto;
     margin-top: 25px;
     overflow: scroll;
-    background:  #666465;
-    /* border-style: solid; */
-    /* border-width: 4px; */
-    /* border-color: rgb(48, 47, 47); */
-    box-shadow:-3px -3px 6px #1b1a1a , 4px 4px 5px #2a2a2b ;
-
 }
 
 .d-main .info-div .product-d{
@@ -130,8 +128,7 @@
     font-weight: 800;
     font-family:Georgia, 'Times New Roman', Times, serif;
     color: rgb(19, 17, 17);
-    background: linear-gradient(to left, rgba(214, 10, 10, 0), rgb(214, 10, 10));
-    }
+}
 
 .modal {
     display: none; 
@@ -145,12 +142,12 @@
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.9);
-  }
+}
   
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
+    width: 100%;
     height: 80%;
     max-width: 700px;
 }
@@ -191,18 +188,18 @@
     color: #f1f1f1;
 }
 
-
-
-/**************************************************************** review*/
+/**************************************************************** reviews ****************************************************************/
 #reviews{
-    padding: 40px 0;
+    padding: 60px 0;
 }
-.review-main{
+
+.review-main,.similar-products{
     width: 95%;
     margin: auto;
 }
+
 .review-head{
-    width: 90%;
+    width: 95%;
     margin: auto;
     padding-bottom: 25px;
     display: flex;
@@ -210,23 +207,30 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.review-head h1{
+
+.review-head h2,.similar-heading h2{
     text-transform: uppercase;
     color: black;
 }
+
 .review-head .rev-btn{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     text-transform: capitalize;
     font-size: 16px;
     align-items: center;
-    width: 175px;
+    width: 200px;
     height: 55px;
-    border-style: solid;
-    border-width: 3px;
-    border-color: black;
-    background: rosybrown;
+    border-radius: 50px;
+    color: black;
+    background: #dfd9d9;
+    box-shadow:  2px 2px 6px #0e0d0d,-2px -2px 6px #1d1c1c;
+}
+
+.review-main .h3{
+    margin: auto;
+    text-align: center;
 }
 
 .review-form, .placeorder-form {
@@ -251,13 +255,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 20px 0px;
 }
 
 .review-info .name label, .review-info .review-text label, 
 .placeorder-info label {
     flex: 25%;
-    align-self: flex-end;
 }
 
 .review-form input, .review-form textarea, .placeorder-form input, .placeorder-form textarea {
@@ -430,10 +434,6 @@
     color: white;
 }
 
-.sub-btn{
-    margin-top: 25px;
-}
-
 .shop-btn button{
     width: 100%;
     margin: auto;
@@ -443,21 +443,20 @@
 
 }
 .sub-btn{
-    width: 45%;
-    margin-left: 15px;
+    width: 80%;
+    margin: auto;
 }
 
 .sub-btn button{
     width: 90%;
     height: 50px;
+    margin-left: 10px;
     text-align: center;
     font-size: 17.5px;
-    margin-right: 10px;
     border-radius: 5px;
     border-radius: 50px;
     background: #dfd9d9;
-    box-shadow:  2px 2px 6px #0e0d0d,
-                -2px -2px 6px #1d1c1c; 
+    box-shadow:  2px 2px 6px #0e0d0d,-2px -2px 6px #1d1c1c; 
 }
 
 .shop-btn button a{
@@ -497,4 +496,46 @@
         text-align: center;
         margin-top: 5px;
     }
+}
+
+@media (max-width:650px) {
+    .bakery-head h1{
+        font-size: 60px;
+    }
+    .bakery-head ul li a{
+        font-size: 20px;
+    }
+    .bakery-head .info p{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:500px) {
+    .bakery-head h1{
+        font-size: 55px;
+    }
+    .bakery-head ul li a{
+        font-size: 13px;
+    }
+    .bakery-head .info p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:400px) {
+    .bakery-head h1{
+        font-size: 35px;
+    }
+    .bakery-head ul li a{
+        font-size: 10px;
+    }
+    .bakery-head .info p{
+        font-size: 10px;
+    }
+}
+
+@media (max-width:380px){
+    .review-form input, .review-form textarea, .placeorder-form input, .placeorder-form textarea {
+       max-width: 180px;
+    }    
 }

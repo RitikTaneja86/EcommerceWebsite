@@ -6,6 +6,15 @@ $(window).on('scroll',function(){
         $('nav').removeClass('black');
     }
 })
+
+$(window).on('scroll', function() {
+    if($(window).scrollTop()) {
+        $('#carousel').css('padding-top','105px');
+    }else {
+        $('#carousel').css('padding-top','0px');
+    }
+})
+
 const searchFocus = document.getElementById('search-focus');
 const keys = [
     { keyCode: 'AltLeft', isTriggered: false },

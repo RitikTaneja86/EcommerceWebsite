@@ -20,7 +20,7 @@
     text-transform: uppercase;   
     color: wheat;
 }
-/*updated*/
+
 .shop-heading h2{
     font-size: 35px;
     font-weight: 800;
@@ -28,7 +28,8 @@
     text-transform: uppercase;   
     color: wheat;
 }
- .shop-heading img{
+
+.shop-heading img{
     margin-left: 15px;
     width: 100px;
     height: 90px;
@@ -46,8 +47,6 @@
     border-radius: 25px;
     background: linear-gradient(to left, #093a2f, #07383f 55%, #666465);
     box-sizing: border-box;
-    /* border-style: ridge; */
-    /* border-width: 2px; */
 }
 
 .shop-main .bakers .column .bakers-name{
@@ -157,6 +156,7 @@
     flex-wrap: wrap;
 
 }
+
 .shop-btn .button .sub-btn{
     width: 40%;
     margin-left: 15px;
@@ -170,11 +170,8 @@
     margin-right: 10px;
     border-radius: 5px;
     border-radius: 50px;
-background: #131212;
-box-shadow:  2px 2px 6px #0e0d0d,
-             -2px -2px 6px #1d1c1c;
-
-    
+    background: #131212;
+    box-shadow:  2px 2px 6px #0e0d0d,-2px -2px 6px #1d1c1c;
 }
 
 .shop-btn button a{
@@ -187,7 +184,6 @@ box-shadow:  2px 2px 6px #0e0d0d,
 }
 
 @media (max-width:900px){
-
     .shop-main .bakers .content .info-box{
         width:auto;
     }
@@ -195,11 +191,9 @@ box-shadow:  2px 2px 6px #0e0d0d,
     .shop-main .bakers .content .image-div{
         width: 95%;
     }
-
 }
 
 @media (max-width:350px){
-
     .shop-btn .button{
         width: 75%;
     }

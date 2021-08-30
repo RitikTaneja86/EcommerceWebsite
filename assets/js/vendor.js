@@ -1,6 +1,6 @@
 $(window).on('scroll',function(){
     if($(window).scrollTop()) {
-        $('#vendor-profile').css("padding-top","90px");
+        $('#vendor-profile').css("padding-top","105px");
     }else {
         $('#vendor-profile').css("padding-top","0px");
     }

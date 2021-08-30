@@ -1,32 +1,27 @@
-.contact{
-    position: relative;
+.contact-main{
     min-height: auto;
-    padding: 50px 100px;
+    padding: 50px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background: rgb(108, 229, 233); */
-    /* background: url(img2.jpeg); */
-    background: white;
-    /* background-image: linear-gradient(to top right, #2857a4, #403066 70%); */
+    background-image: linear-gradient(to top right, #2857a4, #403066 70%);
     background-size: cover;
 }
 
-.contact .content{
+.contact-main .content{
     max-width: 800px;
     text-align: center;
     margin-bottom: 50px;
 }
 
-.contact .content h2{
-font-size: 36px;
-font-weight: 500;
-color: rgb(172, 22, 22);
+.contact-main .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: rgb(241, 239, 239);
 }
 
-.contact .content p{
-
+.contact-main .content p{
     font-weight: 300;
     color: rgb(218, 127, 127);
 }
@@ -37,6 +32,10 @@ color: rgb(172, 22, 22);
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+    padding: 15px;
+    border: #16f1c2;
+    border-width: 5px;
+    border-style: solid;
 }
 
 .contact .contactinfo{
@@ -52,7 +51,7 @@ color: rgb(172, 22, 22);
 }
 
 .contact .contactinfo .box .icon{
-    min-width: 60px;
+    min-width: 50px;
     height: 60px;
     background:#fff;
     display: flex;
@@ -72,21 +71,20 @@ color: rgb(172, 22, 22);
 }
 
 .contact .contactinfo .box .text h3{
-    color: rgb(172, 22, 22);
+    color: rgb(241, 238, 238);
     font-weight: 500;
+    text-transform: uppercase;
 }
 
 .contactform{
    width: 40%;
    padding: 40px;
-   /* background:rgb(247, 136, 136); */
-   background:lightgrey;
    border-radius: 5%;
 }
 
 .contactform h2{
     font-size: 30px;
-    color: #333;
+    color: rgb(247, 245, 245);
     font-weight: 500;
 }
 
@@ -94,6 +92,11 @@ color: rgb(172, 22, 22);
     position:relative;
     width: 100%;
     margin-top: 10px;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-width: 2.5px;
+    outline: none;
+    border-bottom-color: #00bcd4;
 }
 
 .contactform .inputbox input,
@@ -103,9 +106,9 @@ color: rgb(172, 22, 22);
    font-size: 16px;
    margin:10px 0;
    border:none;
-   border-bottom: 2px solid #333;
    outline: none;
    resize: none;
+   background-image: linear-gradient(to top right, #2857a4, #403066 90%);
 }
 
 .contactform .inputbox span{
@@ -116,7 +119,7 @@ color: rgb(172, 22, 22);
     margin: 10px 0;
     pointer-events: none;
     transition: .5s;
-    color: #666;
+    color: rgb(247, 245, 245);
 }
 
 .contactform .inputbox input:focus ~ span,
@@ -138,18 +141,66 @@ color: rgb(172, 22, 22);
     font-size: 18px;
 }
 
-@media(max-width:900px){
+@media(max-width:1000px){
     .contact{
-        padding: 50px;
+        padding: 30px;
     }
     .container{
+        width: 100%;
         flex-direction: column;
     }
     .container .contactinfo{
         margin-bottom: 40px;
     }
-    .container .contactinfo,
+    .container .contactinfo,.contactform{
+        width: 100%;
+    }
+    .contact .contactinfo{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .contactinfo .box{
+        margin-left: 30px;
+    }
+}
+
+@media(max-width:600px){
+    .contact{
+        padding:20px ;
+    }
+    .contact-main{
+        padding: 25px 15px;
+    }
+    .container{
+        width: 100%;
+        flex-direction: column;
+    }
     .contactform{
         width: 100%;
+    }
+    .contact .contactinfo{
+        width: 90%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .contactinfo .box{
+        margin-left: 15px;
+    }
+    .contact .contactinfo .box .text h3{
+        font-size: 25px;
+    }
+    .contact .contactinfo .box .icon{
+        min-width: 45px;
+        border-radius:50% ;
+    }
+}
+
+@media(max-width:450px){
+    .contact{
+        padding:5px ;
+    }
+    .contactform .inputbox span{
+        font-size: 10px;
     }
 }

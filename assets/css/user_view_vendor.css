@@ -6,7 +6,7 @@
 }
 
 .upper-background .heading{
-    width: 65%;
+    width: 100%;
     margin: auto;
 }
 
@@ -15,7 +15,7 @@
     margin: auto;
     font-size: 7rem;
     font-weight: 800;
-    color: mintcream;
+    color: rgb(4, 35, 48);
 }
 
 .profile-container {
@@ -37,7 +37,10 @@
     width: 200px;
     height: 200px;
     border-radius: 100%;
-    box-shadow: 0px 0px 15px 10px black;
+    /* box-shadow: 0px 0px 10px 5px rgb(240, 8, 8); */
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
 }
 
 .description-container {
@@ -170,7 +173,7 @@
 
 @media (max-width: 1000px) {
     .upper-background h2{
-        font-size: 3rem;
+        font-size: 4rem;
     }
     .profile-container {
         margin: 0px 100px;
@@ -182,7 +185,7 @@
         padding-top: 20px;
     }
     .upper-background h2{
-        font-size: 1.8rem;
+        font-size: 2.8rem;
     }
     .profile-container {
         margin: 0px 20px;
@@ -202,7 +205,7 @@
 
 @media (max-width: 350px) {
     .upper-background h2{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .description-container {
         font-size: 0.8rem;

@@ -1,7 +1,7 @@
 $(window).on('scroll',function(){
     if($(window).scrollTop()) {
-        $('.contact').css("padding-top","150px");
+        $('.contact').css("padding-top","105px");
     }else {
-        $('.contact').css("padding-top","50px");
+        $('.contact').css("padding-top","0px");
     }
 })
