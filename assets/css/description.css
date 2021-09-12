@@ -2,6 +2,7 @@
     border-width: 5px;
     border-style: solid;
     border-color: rgb(155, 235, 155);
+    margin-bottom: 20px;
 }
 .description-head h1{
     color: grey;
@@ -22,10 +23,14 @@
         width: 700px;
         height: 350px;
     }
+
 }
 @media (max-width:650px){
     .description-head .content iframe{
         width: 110%;
         height: 350px;
+    }
+    .description-head .content{
+        font-size: 10px;
     }
 }   

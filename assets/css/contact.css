@@ -68,6 +68,7 @@
     color:  rgb(218, 127, 127);
     flex-direction: column;
     font-weight: 300;
+    word-break: break-all;
 }
 
 .contact .contactinfo .box .text h3{

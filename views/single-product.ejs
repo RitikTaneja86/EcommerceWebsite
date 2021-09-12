@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/categories.css">
-<link rel="stylesheet" href="/css/single-product.css">
-<link rel="stylesheet" href="/css/product-cards.css">
 <link rel="stylesheet" href="/css/reviews.css">
+<link rel="stylesheet" href="/css/product-cards.css">
+<link rel="stylesheet" href="/css/single-product.css">
 
 <section id="description">
     <% if(productExist == true) { %>
@@ -14,10 +14,9 @@
                 <p><%= profile.areacovered %></p>
             </div>
             <div class="timings">
-                <p>mon-fri</p>
-                <p>9-10pm</p>
+                <p><%= profile.time %></p>
             </div>
-            <div class="contact">
+            <div class="contactNo">
                 <p><%= profile.contact %></p>
             </div>
         </div>
@@ -185,8 +184,15 @@
             
             </div>
             
+            <!-- <div id="imgModal" class="modal">
+                <span class="close" data-dismiss="modal" aria-label="close" aria-hidden="true">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div> -->
+
+            
             <div id="imgModal" class="modal">
-                <span class="close">&times;</span>
+                <span class="close closeimg">&times;</span>
                 <img class="modal-content" id="img01">
                 <div id="caption"></div>
             </div>
@@ -264,7 +270,6 @@
                     <h2>similar products</h2>
                 </div>
                 <div class="similar-content responsive">
-                    
                     <% for(product of similar_products) { %>
                         <div>
                             <%- include('_product-card.ejs'); %>

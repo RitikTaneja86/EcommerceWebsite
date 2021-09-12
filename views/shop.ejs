@@ -9,7 +9,7 @@
             <% profile.forEach((profile)=>{ %>
                 <div class="column">
                     <div class="bakers-name">
-                        <h3><%= profile.bakeryname %></h3> 
+                        <h3><a href="/member-profile/<%= profile._id %>"><%= profile.bakeryname %></a></h3> 
                         <img src="../images/chef.png" alt="">
                     </div>
                     <div class="content">
@@ -17,7 +17,7 @@
                             <div class="img">
                                 <img src="<%= profile.profileimage %>" alt="">
                             </div>
-                            <p><%= profile.firstname %> <%=profile.lastname%></p>
+                            <p><a href="/member-profile/<%= profile._id %>"><%= profile.firstname %> <%=profile.lastname%></a></p>
                         </div>
                         <div class="info-box">
                             <div class="info-box2">

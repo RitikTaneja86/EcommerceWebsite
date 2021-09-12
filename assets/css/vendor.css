@@ -290,6 +290,17 @@ form .inputbox input {
     color: red;
 }
 
+.p-description{
+    margin-bottom: 7px;
+    max-height:30px;
+}
+
+.p-description p{
+    font-size: 10px;
+    font-weight: 500;
+    min-height: 100px;   
+}
+
 .flex{
     display: flex;
     flex-direction: row;
@@ -331,6 +342,11 @@ form .inputbox input {
 .bttn-def:hover span{
     display: inline-block;
     transform: scale(0.98);
+}
+
+.product-thumb {
+    display: flex;
+    flex-direction: column;
 }
 
 .edit-product {
@@ -557,6 +573,8 @@ form .inputbox input {
         padding: 0;
     }
     .profile-image {
+        display: flex;
+        justify-content: center;
         width: 100%;
     }
     .profile-image img{
@@ -718,7 +736,10 @@ form .inputbox input {
         width: 90%;
     }
     .products-container {
-        width: 90%;
+        width: 60%;
+    }
+    .single-product {
+        min-height: 275px;
     }
     .product-options a {
         font-size: 1em;
@@ -751,6 +772,9 @@ form .inputbox input {
     #orders .all-details h3 {
         font-size: 1.2rem;
     }  
+    .product-btns {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width:436px) {

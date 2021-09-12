@@ -11,8 +11,8 @@ exports.contactUs = (contact) => {
         to: 'ritiktaneja1842000@gmail.com',
         subject: "CONTACT",
         html: `<div><b>Name :</b> ${contact.name} </div><br>
-               <div><b>Email :</b> ${contact.email}</div><br>
-               <div><b>Message :</b> ${contact.message}</div>`
+               <div><b>Email :</b> ${contact.email} </div><br>
+               <div><b>Message :</b> ${contact.message} </div>`
     }, (err, info) => { //info carries the information about the request that has been sent
         if(err) {
             console.log('Error in sending mail', err);

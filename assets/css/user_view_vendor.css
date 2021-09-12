@@ -110,12 +110,13 @@
 .description-container .desc-p {
     width: 80%;   
     text-align: justify;
-    color: darkgray;
+    color: rgb(97, 96, 96);
     font-weight: 500;
     margin: 15px 0px;
 }
 
 .description-container .desc-p span {
+    font-size: 20px;
     font-weight: 700;
     color: #3C4858;
 }

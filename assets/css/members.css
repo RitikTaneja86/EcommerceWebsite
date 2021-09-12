@@ -79,6 +79,11 @@
     font-size: 18px;
     font-weight: 600;
 }
+.member .member-info  p{
+    color: wheat;
+    font-weight: 900;
+    text-align: left;
+}
 
 .member .member-info .specialisation{
     width: 200px;
@@ -88,4 +93,9 @@
     font-family: cursive ;
     font-size: 18px;
     font-weight: 600; 
+}
+@media(max-width:450px){
+    .member-table{
+        background-position-x: -200px;
+    }
 }

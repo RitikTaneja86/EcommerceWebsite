@@ -62,6 +62,11 @@
     color: wheat;
 }
 
+.shop-main .bakers .column .bakers-name a{
+   text-decoration: none;
+   color: wheat;
+}
+
 .shop-main .bakers .column .bakers-name img{
     height: 40px;
     margin-left: 15px;
@@ -112,6 +117,13 @@
     margin-top: 10px;
     color: rgb(9, 243, 184);
 }
+.shop-main .bakers .content .image-div a {
+    text-decoration: none;
+    background: rgb(14, 10, 4);
+    color:rgb(238, 78, 78);
+    font-weight: 900;
+    text-transform: uppercase;
+}
 
 .shop-main .bakers .content .info-box{
     padding:0 10px;
@@ -133,15 +145,16 @@
 }
 
 .shop-main .bakers .content .info-box .info span{
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: rgb(10, 148, 102);
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
 }
 
 .shop-main .bakers .content .info-box .info h3{
     text-align: justify;
     font-weight: 200;
+    font-size: 22.5px;
 }
 
 .shop-btn{
@@ -191,27 +204,70 @@
     .shop-main .bakers .content .image-div{
         width: 95%;
     }
+    .shop-btn button a i{
+        margin-left: 4px;
+    }
 }
 
-@media (max-width:350px){
-    .shop-btn .button{
-        width: 75%;
+@media (max-width:815px) {
+    .shop-heading{
+        font-size: 24px;
     }
+    .shop-heading img{
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+    } 
+}
 
-    .shop-btn button a{  
-        font-size: 20px;
+@media (max-width:650px) {
+    .shop-heading{
+        font-size: 17px;
     }
-
-    .shop-main .bakers .column .bakers-name img{
-        height: 35px;
-        margin-left: 10px;
+    .shop-heading img{
+        width: 60px;
+        height: 65px;
+        margin-right: 20px;
+    } 
+    .shop-main .bakers .content {
+        width: 100%;
     }
+    .shop-main .bakers .content .info-box .info h3{
+        font-size: 18px;
+    }
+    .shop-btn button a{
+        font-size: 17px;
+    }
+}
 
+@media (max-width:475px) {
+    .shop-heading{
+        font-size: 16px;
+    }
+    .shop-heading img{
+        width: 45px;
+        height: 40px;
+        margin-right: 10px;
+    } 
     .shop-main .bakers .column .bakers-name h3{
-        font-size: 30px;   
+        font-size: 25px;
+        font-weight: 700;
+        font-style: italic;
     }
-
-    .shop-heading h2{
-        font-size: 25px;  
+    .shop-main .bakers .column .bakers-name img{
+        height: 30px;
+    }
+    .shop-main .bakers .content .info-box .info span{
+        
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .shop-main .bakers .content .info-box .info h3{
+        text-align: justify;
+        font-weight: 200;
+        font-size: 15px;
+    }
+    .shop-btn button a{
+        font-size: 13px;
     }
 }

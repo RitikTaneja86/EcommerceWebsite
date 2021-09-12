@@ -9,6 +9,7 @@ const signupMailer = require('../mailers/signup.js');
 const actionMailer = require('../mailers/action.js');
 const moment = require('moment');
 const url = require('url');
+const sharp = require('sharp');
 const { response } = require('express');
 const { profile } = require('console');
 
@@ -152,6 +153,7 @@ module.exports.createProfile = async function(req, res) {
                     areacovered: req.body.areacovered,
                     description: req.body.description,
                     speciality: req.body.speciality,
+                    time: req.body.timings,
                     experience: req.body.experience,
                     user_id: req.user._id,
                     email: req.user.email
@@ -189,6 +191,7 @@ module.exports.updateProfile = async function(req, res) {
         var prop = info.prop;
         var obj = {};
         obj[prop] = value;
+        console.log(obj);
         await Profile.findByIdAndUpdate(profileId, {$set:obj},{new: true}, async function(err, profile) {
             if (err) {
                 console.log('error', err);
@@ -258,9 +261,14 @@ module.exports.addingItem = async function(req,res){
                     unit = '';
                     weight = amount[2]+unit;
                 }
-                console.log(unit,weight,amount);
+                var path = Product.productpath + '/' + req.file.filename;
+                let fixImage = async function() {
+                    await sharp(path)
+                    .resize(200, 200)
+                    .jpeg({ quality: 90 })
+                }
                 Product.create({
-                    productimage: Product.productpath + '/' + req.file.filename,
+                    productimage: path,
                     name: req.body.name,
                     flavour: req.body.flavour,
                     price: req.body.price,
@@ -508,4 +516,3 @@ module.exports.orderAction = async function(req,res) {
         })
     }
 }
-

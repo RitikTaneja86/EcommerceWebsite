@@ -1,5 +1,5 @@
 .slick-slide {
-    padding: 20px;
+    padding: 15px;
 }
 
 .single-product{
@@ -49,6 +49,7 @@ color: #7289ab;
 .single-product .description{
     display: inline-block;
     margin-bottom: 5px;
+    height: 50px;
 }
 
 .single-product .description p{
@@ -117,4 +118,106 @@ a{
 .similar-products .slick-prev:before ,.similar-products .slick-next:before{
     color: black !important;
     display: none;
+}
+
+@media(max-width: 1000px) {
+    .slick-slide {
+        padding: 7px;
+    }
+}
+
+@media(max-width: 800px) {
+    .slick-slide {
+        padding: 5px;
+    }
+    
+    .single-product{
+        padding: 6px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        max-height: 250px;
+    }
+    
+    .single-product .product-thumb{
+        margin-bottom: 2px;
+    }
+    
+    img{
+        max-width: 90%;
+        height: 100px;
+    }
+    
+    .single-product .product-title{
+        margin-bottom: 5px;
+    }
+    
+    .single-product .product-title h3{
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .single-product .description{
+        margin-bottom: 7px;
+        max-height:30px;
+    }
+    
+    .single-product .description p{
+        font-size: 10px;
+        font-weight: 500;    
+    }
+
+    .btn-s {
+        font-size: 10px;
+        font-weight: 600;
+    }
+}
+
+@media(max-width: 500px) {
+    .slick-slide {
+        padding: 5px;
+    }
+    
+    .single-product{
+        padding: 5px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        max-height: 200px;
+    }
+    
+    .single-product .product-thumb{
+        margin-bottom: 2px;
+    }
+    
+    img{
+        max-width: 90%;
+        height: 100px;
+    }
+    
+    .single-product .product-title{
+        margin-bottom: 5px;
+    }
+    
+    .single-product .product-title h3{
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .single-product .description{
+        margin-bottom: 5px;
+        max-height:30px;
+    }
+    
+    .single-product .description p{
+        font-size: 10px;
+        font-weight: 400;    
+    }
+
+    .btn-s {
+        width: 50%;
+        font-size: 9px;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
 }

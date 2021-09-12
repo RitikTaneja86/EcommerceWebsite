@@ -5,6 +5,14 @@ $(window).on('scroll',function(){
         $('#vendor-profile').css("padding-top","0px");
     }
 })
+
+var ifOnOrder = window.location.pathname.includes('orders');
+if(ifOnOrder) {
+    setTimeout(function() {
+        window.location.reload();
+    },500000);
+}
+
 {    
     let createProfile = function() {
 
@@ -32,15 +40,6 @@ $(window).on('scroll',function(){
                         layout: 'topRight',
                         timeout: 2500
                     }).show();
-                    // $('.display-firstname').text(`${data.data.info.firstname}`);
-                    // $('.display-lastname').text(`${data.data.info.lastname}`);
-                    // $('.display-contactname').text(`${data.data.info.contact}`);
-                    // $('.display-bakeryname').text(`${data.data.info.bakeryname}`);
-                    // $('.display-instaid').text(`${data.data.info.instaid}`);
-                    // $('.display-fbid').text(`${data.data.info.fbid}`);
-                    // $('.display-area').text(`${data.data.info.areacovered}`);
-                    // $('.display-description').text(`${data.data.info.description}`);
-                    // $('.display-speciality').text(`${data.data.info.speciality}`);
                 },
                 contentType: false,
                 processData: false
@@ -148,7 +147,13 @@ $(window).on('scroll',function(){
                             <p contenteditable="false" class="display-speciality">${info.speciality}</p>
                         </div>
                     </div>
-
+                    <div class="profile-info timings">
+                        <span class="info-title"><b>DAY AND TIME</b></span>
+                        <i class="fas fa-pencil-alt edit-timings"></i>
+                        <a href="/vendor/updateProfile/<%= profile._id %>" class="save timings"><i class="fas fa-save"></i></a>
+                        <br>
+                        <span contenteditable="false" class="info-data display display-timings">${info.time}</span>
+                    </div>
                     <div class="profile-info">
                         <span class="info-title"><b>EXPERIENCE</b></span>
                         <i class="fas fa-pencil-alt edit-exp"></i>
@@ -260,6 +265,17 @@ $(window).on('scroll',function(){
             $('.display-speciality').attr('contenteditable','false');
             $('.edit-speciality').css('display','initial');
             $('.speciality').css('display','none');
+        });
+        $('.edit-timings').on('click', function() {
+            $('.display-timings').attr('contenteditable','true');
+            $('.display-timings').focus();
+            $('.edit-timings').css('display','none');
+            $('.time').css('display','initial');
+        });
+        $('.time').on('click', function() {
+            $('.display-timings').attr('contenteditable','false');
+            $('.edit-timings').css('display','initial');
+            $('.time').css('display','none');
         });
         $('.edit-exp').on('click', function() {
             $('.display-exp').attr('contenteditable','true');

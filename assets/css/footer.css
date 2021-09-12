@@ -69,12 +69,21 @@ footer{
 
 .right .content-links a{
     text-decoration: none;
-    color: aqua;
+    color: darkslategray;
 }
 
 .right .content-links a:hover{
     color:#f12020;
     transition: 0.3s;
+}
+.copyright{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.copyright p{
+    color: grey;
 }
 
 @media (max-width:900px){
@@ -82,7 +91,11 @@ footer{
         display:flex; 
         flex-direction: column;
         text-align: center;
+    }
+    .copyright{
+        width: 75%; 
     }  
+    
 }
 
 @media (max-width:750px){
@@ -93,4 +106,16 @@ footer{
     .right .content .content-links{
         margin: auto;
     }
+    .copyright p{
+        font-size: 15px;
+    }
 } 
+@media (max-width:550px){
+    
+    .copyright{
+        width: 90%;
+    }  
+    .copyright p{
+        font-size: 10px;
+    }
+}

@@ -6,7 +6,13 @@
         <h3> <a href="/single-product/<%= product._id %>"><%= product.name %></a> </h3>
     </div>
     <div class="description">
-        <p><%= product.description %></p>
+        <% if(product.description.length <= 50) { %>
+            <p><%= product.description %></p>
+        <% }else{ %>
+            <p><%= product.description.substring(0,50) + "...." %><a class="read-more-btn" href="/single-product/<%= product._id %>"><small><button type="button" style="border: none; background: none; color: cadetblue;">
+                Read more <i class="fas fa-arrow-right"></i>
+            </button></small></a></p>   
+        <% } %>   
     </div>
     <div class="product-btns">
         <span class="btn-s mr-2 price"><%= product.price %>/-</span>

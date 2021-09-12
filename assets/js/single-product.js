@@ -16,7 +16,7 @@ $('#productimg').on('click',function(e) {
     captionText.innerHTML = this.alt;
 })
 
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("closeimg")[0];
     span.onclick = function() {
         modal.style.display = "none";
 }

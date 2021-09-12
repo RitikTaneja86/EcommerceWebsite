@@ -148,9 +148,9 @@ nav.black{
 
 .overlay .closebtn {
     position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+    top: 0px;
+    right: 37px;
+    font-size: 38px;
     cursor: pointer;
     color: white;
 }

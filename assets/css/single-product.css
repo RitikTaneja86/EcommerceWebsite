@@ -119,7 +119,8 @@
 .d-main .info-div .product-d p{
     font-size: 18px;
     font-weight: 600;
-    color: rgb(2, 26, 22);
+    color: rgb(20, 6, 146);
+    
 }
 
 .d-main .info-div .product-d span{
@@ -206,6 +207,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .review-head h2,.similar-heading h2{
@@ -216,12 +218,12 @@
 .review-head .rev-btn{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     text-transform: capitalize;
     font-size: 16px;
     align-items: center;
     width: 200px;
-    height: 55px;
+    height: 45px;
     border-radius: 50px;
     color: black;
     background: #dfd9d9;
@@ -485,6 +487,19 @@
     margin-right: 80px;
 }
 
+.review-head {
+    padding-bottom: 0px;
+}
+
+.review-content-body {
+    height: 100px;
+}
+
+.review-content-body .review-date{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 700px){
     .modal-content {
       width: 100%;
@@ -495,6 +510,18 @@
     .d-image .image-name{
         text-align: center;
         margin-top: 5px;
+    }
+    .review-content-body .review-date{
+        margin-bottom: 0px;
+    }
+    .d-image .image-name h2{
+        padding-bottom: 15px;
+        font-size: 45px;
+    } 
+    
+    .d-image .image-name p{
+        font-size: 22.5px;
+        
     }
 }
 
@@ -508,6 +535,38 @@
     .bakery-head .info p{
         font-size: 15px;
     }
+    .review-head h2,.similar-heading h2{
+        text-transform: uppercase;
+        color: black;
+        font-size: 22px;
+    }
+    .d-image .image-name h2{
+        padding-bottom: 15px;
+        font-size: 35px;
+    } 
+    
+    .d-image .image-name p{
+        font-size: 20px;
+        
+    }
+    .d-main .info-div .product-d p{
+        font-size: 15px;
+        font-weight: 600;
+        color: rgb(7, 90, 76);
+    }
+    
+    .d-main .info-div .product-d span{
+        text-transform: uppercase;
+        font-size: 17.5px;
+        font-weight: 800;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: rgb(19, 17, 17);
+    }
+    .review-head .rev-btn{
+        width: 180px;
+        height: 40px;
+    }
+
 }
 
 @media (max-width:500px) {
@@ -532,10 +591,37 @@
     .bakery-head .info p{
         font-size: 10px;
     }
+    .review-head h2,.similar-heading h2{
+        text-transform: uppercase;
+        color: black;
+        font-size: 18px;
+    }
+    .d-image .image-name h2{
+        padding-bottom: 15px;
+        font-size: 30px;
+    } 
+    
+    .d-image .image-name p{
+        font-size:17.5px;
+        
+    }
 }
 
 @media (max-width:380px){
     .review-form input, .review-form textarea, .placeorder-form input, .placeorder-form textarea {
        max-width: 180px;
     }    
+    .d-main .info-div .product-d p{
+        font-size: 12px;
+        font-weight: 600;
+        color: rgb(7, 90, 76);
+    }
+    
+    .d-main .info-div .product-d span{
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 800;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: rgb(19, 17, 17);
+    }
 }

@@ -102,6 +102,10 @@
                                 <label>EXPERIENCE</label>
                                 <input type="text" name="experience" id="experience">
                             </div>
+                            <div class="inputbox">
+                                <label>DAY AND TIME</label>
+                                <input type="text" name="timings" id="timing" placeholder="eg : MON-FRI 9AM-10PM">
+                            </div>
                             <div class="textarea-container">
                                 <div class="textarea">
                                     <label>AREA COVERED</label>
@@ -205,7 +209,13 @@
                                 <p contenteditable="false" class="display display-speciality"><%=profile.speciality%></p>
                             </div>
                         </div>
-
+                        <div class="profile-info timings">
+                            <span class="info-title"><b>DAY AND TIME</b></span>
+                            <i class="fas fa-pencil-alt edit-timings"></i>
+                            <a href="/vendor/updateProfile/<%= profile._id %>" class="save time"><i class="fas fa-save"></i></a>
+                            <br>
+                            <span contenteditable="false" class="info-data display display-timings"><%=profile.time%></span>
+                        </div>
                         <div class="profile-info exp">
                             <span class="info-title"><b>EXPERIENCE</b></span>
                             <i class="fas fa-pencil-alt edit-exp"></i>
@@ -259,22 +269,30 @@
                                     </div>                                      
                                 </div>
                                 <div class="product-thumb">
-                                    <img src="<%=product.productimage%>" alt="">
+                                    <div>
+                                        <img src="<%=product.productimage%>" alt="">
+                                    </div>
+                                    <div class="edit-product">
+                                        <a href="/vendor/updateItem/<%=product._id%>" class="edit-prod">Edit <i class="fas fa-pencil-alt"></i></a>
+                                    </div>
                                 </div>
                                 <div class="product-title">
                                     <h3> <a href="/single-product/<%=product._id%>"><%=product.name%></a>
                                     </h3>
                                 </div>
-                                <div class="description">
-                                    <p><%=product.description%></p>
+                                <div class="p-description">
+                                    <% if(product.description.length <= 50) { %>
+                                        <p><%= product.description %></p>
+                                    <% }else{ %>
+                                        <p><%= product.description.substring(0,50) + "...." %><a class="read-more-btn" href="/single-product/<%= product._id %>"><small><button type="button" style="border: none; background: none; color: cadetblue;">
+                                            Read more <i class="fas fa-arrow-right"></i>
+                                        </button></small></a></p>   
+                                    <% } %>   
                                 </div>
                                 <div class="product-btns">
-                                    <span class="btn-small mr-2 price"><%= product.price %>/-</span>
-                                    <span class="btn-small"><i class="fa fa-info-circlefa fa-heart" style="color: red;transform: scale(1.25);padding-right: 2.5px;"></i><%=product.likes%></span>
+                                    <span class="btn-s mr-2 price"><%= product.price %>/-</span>
+                                    <span class="btn-s"><i class="fa fa-info-circlefa fa-heart" style="color: red;transform: scale(1.25);padding-right: 2.5px;"></i><%=product.likes%></span>
                                 </div> 
-                                <div class="edit-product">
-                                    <a href="/vendor/updateItem/<%=product._id%>" class="edit-prod">Edit <i class="fas fa-pencil-alt"></i></a>
-                                </div>
                             </div>
                         </div> 
                     <% }) %>

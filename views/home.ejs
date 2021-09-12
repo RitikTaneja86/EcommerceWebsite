@@ -42,7 +42,7 @@
 <section id="description">
     <div class="description-head">
         <div class="bestselling-heading" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000"> 
-            <h1>who are we ?</h1>
+            <h1 class="common">who are we ?</h1>
         </div>
 
         <div class="best-seller-container " data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">
@@ -57,7 +57,7 @@
 
 <section id="bestselling">
     <div class="bestselling-heading" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000"> 
-        <h1>bestselling items</h1>
+        <h1 class="common">bestselling items</h1>
     </div>
 
     <div class="best-seller-container responsive" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">
@@ -73,7 +73,7 @@
 <section id="top-reviews">
     <div class="top-reviews">
         <div class="head bestselling-heading" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">
-            <h1>Top Reviews</h1>
+            <h1 class="common">Top Reviews</h1>
         </div>
         <div class="review-back">
             <div class="best-seller-container review-main responsive" id="review-box" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">
@@ -88,7 +88,7 @@
 <section id="video-section">
     <div class="top-reviews">
         <div class="head bestselling-heading" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">
-            <h1>some glimpse of our bakers </h1>
+            <h1 class="common">some glimpse of our bakers </h1>
         </div>
         <div class="review-back">
             <div class="best-seller-container review-main " id="review-box" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">
@@ -100,7 +100,7 @@
 
 <section id="members-list">
     <div class="member-head" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">
-        <h1> Our Bakery Chef's</h1>
+        <h1 class="common"> Our Bakery Chef's</h1>
     </div>
     <div class="member-table" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">
         <% profiles.forEach(function(profile){%>
@@ -115,9 +115,13 @@
                     <div class="experience">
                         <h3><%=profile.bakeryname%> </h3>
                     </div>
-                    <div class="specialisation">
-                        <h3><%=profile.description%> </h3>
-                    </div>
+                    <% if(profile.description.length <= 75) { %>
+                        <p><%= profile.description %></p>
+                    <% }else{ %>
+                        <p><%= profile.description.substring(0,75) + "...." %><a href="/member-profile/<%= profile._id %>"><small><button type="button" style="border: none; background: none; color: cadetblue;">
+                            Read more <i class="fas fa-arrow-right"></i>
+                        </button></small></a></p>   
+                    <% } %>
                 </div>
             </div>
             
@@ -126,7 +130,7 @@
 </section>
 
 <section id="place-order">
-    <h1 class="place-order-h1" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">STEPS TO PLACE ORDER</h1>
+    <h1 class="place-order-h1 common" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">STEPS TO PLACE ORDER</h1>
     
     <div class="table" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">
         <div class="service-box">
@@ -202,7 +206,7 @@
 
 
 <section id="services">
-    <h1 class="services-h1" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">SERVICES</h1>
+    <h1 class="services-h1 common" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">SERVICES</h1>
     <div class="table" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">
 
         <div class="service-box">
@@ -261,7 +265,7 @@
 <section id="location">
     <div class="description-head">
         <div class="bestselling-heading" data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">
-            <h1>location</h1> 
+            <h1  class="common">location</h1> 
         </div>
 
         <div class="best-seller-container " data-aos="zoom-in"  data-aos-offset="125" data-aos-delay="100"  data-aos-duration="1000">

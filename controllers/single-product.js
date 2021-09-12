@@ -12,7 +12,7 @@ module.exports.single_productPage = async function(req, res) {
                 return res.redirect('back');
             }
             if(foundproduct === null) {
-                await Product.find({})
+                Product.find({})
                 .limit(10)
                 .exec((err,foundproducts) => {
                     if(err){
@@ -24,40 +24,41 @@ module.exports.single_productPage = async function(req, res) {
                         productExist: false
                     });
                 })
-            }
-            var profileId = foundproduct.profile;
-            await Profile.findById({_id : profileId},async (err,foundprofile)=>{
-                if(err) {
-                    console.log('error', err);
-                    return res.redirect('back');
-                }
-                await Product.find({profile:profileId})
-                .sort({likes: 'desc'})
-                .limit(15)
-                .where('_id').ne(productId)
-                .exec(async (err,products)=>{
-                    if(err){
-                        console.log('error',err);
+            } else {
+                var profileId = foundproduct.profile;
+                await Profile.findById({_id : profileId},async (err,foundprofile)=>{
+                    if(err) {
+                        console.log('error', err);
                         return res.redirect('back');
                     }
-                    await Review.find({product:productId},(err,foundreviews)=>{
-                        if(err) {
+                    await Product.find({profile:profileId})
+                    .sort({likes: 'desc'})
+                    .limit(15)
+                    .where('_id').ne(productId)
+                    .exec(async (err,products)=>{
+                        if(err){
                             console.log('error',err);
-                            res.redirect('back');
+                            return res.redirect('back');
                         }
-                        if(foundproduct && products && foundreviews){
-                            return res.render('single-product',{
-                                product: foundproduct,
-                                similar_products: products,
-                                reviews : foundreviews,
-                                productExist: true,
-                                profile : foundprofile,
-                                moment: moment
-                            });
-                        }
+                        await Review.find({product:productId},(err,foundreviews)=>{
+                            if(err) {
+                                console.log('error',err);
+                                res.redirect('back');
+                            }
+                            if(foundproduct && products && foundreviews){
+                                return res.render('single-product',{
+                                    product: foundproduct,
+                                    similar_products: products,
+                                    reviews : foundreviews,
+                                    productExist: true,
+                                    profile : foundprofile,
+                                    moment: moment
+                                });
+                            }
+                        });
                     });
                 });
-            });
+            }
         });
     } catch (error) {
         if(error) {
